@@ -13,7 +13,7 @@
     docket image list
     az login
 
-## from local if you want to deploy the image to aks
+## From local if you want to deploy the image to aks
     az login 
     az aks get-credentials --name CloudTech --resource-group learnRG --overwrite-existing
     az aks update -n CloudTech -g learnRG --attach-acr acrcloudtechram-b6huexbya5dgfaa7.azurecr.io
