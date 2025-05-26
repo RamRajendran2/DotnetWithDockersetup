@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dotnetwithdockersetup 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnetwithdockersetup
+  template:
+    metadata:
+      labels:
+        app: dotnetwithdockersetup 
+    spec:
+      containers:
+        - name: dotnetwithdockersetup 
+          image: acrcloudtechram-b6huexbya5dgfaa7.azurecr.io/dotnetwithdockersetup
+          ports:
+          - containerPort: 8080
