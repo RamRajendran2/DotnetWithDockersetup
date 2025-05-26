@@ -14,22 +14,22 @@ Other useful commands for local
     az login`
 
 from local if you want to deploy the image to aks
-    `az login 
-    az aks get-credentials --name CloudTech --resource-group learnRG --overwrite-existing
-    az aks update -n CloudTech -g learnRG --attach-acr acrcloudtechram-b6huexbya5dgfaa7.azurecr.io
-    az acr build --registry acrcloudtechram-b6huexbya5dgfaa7.azurecr.io --image cloudtechramreg.azurecr.io/dotnetwithdockersetup:v1.0.0 .`
+    `az login` 
+    `az aks get-credentials --name CloudTech --resource-group learnRG --overwrite-existing`
+    `az aks update -n CloudTech -g learnRG --attach-acr acrcloudtechram-b6huexbya5dgfaa7.azurecr.io`
+    `az acr build --registry acrcloudtechram-b6huexbya5dgfaa7.azurecr.io --image cloudtechramreg.azurecr.io/dotnetwithdockersetup:v1.0.0 .`
 Use below cmds for local kubernet 
-    `az aks install-cli
-    az aks get-credentials --name <cluster-name> --resource-group <resource-group>
-    az aks get-credentials --name webappaks --resource-group webappaks_group --overwrite-existing
-    az aks update -n webappaks -g webappaks_group --attach-acr cloudtechramreg
-    kubectl create deployment dep1 --image=cloudtechramreg.azurecr.io/dotnetwithdockersetup:67 --replicas=1
-    kubectl get deployment
-    kubectl get pods
-    kubectl expose deployment dep1 --type=LoadBalancer --port=80 --target-port=8080`
+    `az aks install-cli`
+    `az aks get-credentials --name <cluster-name> --resource-group <resource-group>`
+    `az aks get-credentials --name webappaks --resource-group webappaks_group --overwrite-existing`
+    `az aks update -n webappaks -g webappaks_group --attach-acr cloudtechramreg`
+    `kubectl create deployment dep1 --image=cloudtechramreg.azurecr.io/dotnetwithdockersetup:67 --replicas=1`
+    `kubectl get deployment`
+    `kubectl get pods`
+    `kubectl expose deployment dep1 --type=LoadBalancer --port=80 --target-port=8080`
 debug cmds
-    `kubectl get svc
-    kubectl describe svc dep1
-    kubectl get pods
-    kubectl logs <pod-name>`
+    `kubectl get svc`
+    `kubectl describe svc dep1`
+    `kubectl get pods`
+    `kubectl logs <pod-name>`
 
