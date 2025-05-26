@@ -1,17 +1,17 @@
 ## To push from local to ACR
 ## create an image(Refer the Dockerfile)
-    docker build -t dotnetwithdockersetup:v1.0.0 .`    
+    docker build -t dotnetwithdockersetup:v1.0.0 .   
 ## Run the image in local container -d mean run service detached,-e environment ,-p port info
-    `docker run -p 5632:8080 -e ASPNETCORE_ENVIRONMENT=Development --name app-v1.3.0 -d dotnetwithdockersetup:v1.0.0`
+    docker run -p 5632:8080 -e ASPNETCORE_ENVIRONMENT=Development --name app-v1.3.0 -d dotnetwithdockersetup:v1.0.0
 
 ## Push the image to acr
-    `az acr build --registry acrcloudtechram-b6huexbya5dgfaa7.azurecr.io --image dotnetwithdockersetup:v1.0.0 .`
+    az acr build --registry acrcloudtechram-b6huexbya5dgfaa7.azurecr.io --image dotnetwithdockersetup:v1.0.0 .
 
 ## Other useful commands for local
-    `docker stop app-v1.3.0
+    docker stop app-v1.3.0
     docker start app-v1.3.0
     docket image list
-    az login`
+    az login
 
 ## from local if you want to deploy the image to aks
     `az login` 
